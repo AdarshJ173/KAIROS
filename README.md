@@ -1,32 +1,61 @@
-# React + TypeScript + Vite
+# <img src="./public/logo.svg" width="48" height="48" align="center" /> KAIROS — Premium SOTA Task Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> **Kairos (Ancient Greek: καιρός)**: *The perfect, delicate, crucial moment; the opportune time.*
 
-Currently, two official plugins are available:
+KAIROS is a high-performance, premium, neobrutalist browser extension built to conquer your task list cleanly. It operates entirely as an overlay panel that works **anywhere, anytime** in your browser using a global keyboard shortcut, keeping your flow state completely uninterrupted.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✦ Core Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Anywhere, Anytime Access**: Open it instantly on any tab, settings panel, or browser system page via global hotkey (`Alt+Shift+Y` or `Ctrl+Shift+Y`).
+- **Zero Page Intrusion**: Renders inside a native browser action popup bubble to eliminate host page CSS conflicts or injection warnings.
+- **Elite Neobrutalist SOTA UI/UX**: Designed around high-contrast flat layout elements, heavy solid shadows, bold borders, and vibrant color blocks (Primary Red, Secondary Yellow, Accent Blue).
+- **Full CRUD Management**: Seamlessly add, edit, sort, and complete tasks with category domains and priority levels.
+- **Smart Progress Statistics**: Clean visual summary showing the exact progress of your daily task completion.
+- **Keyboard-First Hotkeys**: Fully navigate the interface without touching your mouse.
+- **Robust Storage Sync**: Synchronizes state instantly with `chrome.storage.local` with local storage fallbacks.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## ⌨ Keyboard Commands
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
+| Action | Shortcut (Outside) | Hotkey (Inside KAIROS) |
+| :--- | :--- | :--- |
+| **Open/Hide Panel** | `Alt` + `Shift` + `Y` *(Mac: `Ctrl` + `Shift` + `Y`)* | `Esc` |
+| **Summon New Task** | — | `N` |
+| **Focus Search Bar** | — | `/` |
+| **Toggle Light/Dark Theme** | — | `T` |
+
+---
+
+## 🎨 Design System Variables
+
+KAIROS runs on a custom SOTA neobrutalist styling layer powered by **Tailwind CSS v4**.
+
+```css
+:root {
+  --primary: rgb(255, 51, 51);      /* Bold Crimson */
+  --secondary: rgb(255, 255, 0);    /* Vibrant Gold */
+  --accent: rgb(0, 102, 255);       /* Royal Blue */
+  --background: rgb(255, 255, 255); /* Obsidian Dark / Clean White */
+  --border: rgb(0, 0, 0);           /* Solid Outline */
+  --radius: 0px;                    /* Block Corners */
+  --shadow: 4px 4px 0px 0px #000;   /* Flat Drop Shadow */
 }
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## ⚙ Installation & Setup
+
+1. Clone or download this repository.
+2. Build the production package:
+   ```bash
+   npm run build
+   ```
+3. Open your browser and navigate to `chrome://extensions` or `brave://extensions`.
+4. Toggle **Developer mode** in the top-right corner.
+5. Click **Load unpacked** in the top-left corner.
+6. Select the compiled `dist/` directory inside this repository.
+7. Pin **KAIROS** to your extension toolbar, press your shortcut, and command your time.
